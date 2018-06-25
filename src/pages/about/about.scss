@@ -1,3 +1,24 @@
 page-about {
-
+    ion-content{             
+        background-image: url('../assets/imgs/BG.jpg');     
+ }
+ ion-card{
+     text-align: center;
+ }
+ .thumb{
+    color: #72EBFD;
+    background-color: #fff;
+    box-shadow: #000000;
+    border-radius: 7px;
+    margin-bottom: 15px;
+ }
+ .top-text
+  {
+        color: #fff;
+  }  
+  .img-card
+  {
+      max-width: 25%;
+      border-radius: 50px;
+  } 
 }
