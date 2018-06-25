@@ -1,9 +1,12 @@
 page-home {
 
- .bg-image { 
-            
-        background-image: url('../assets/imgs/BG.jpg');
-        zoom: 40%;
-     }
+ion-content{             
+        background-image: url('../assets/imgs/BG.jpg');     
+ }
+
+  .top-text
+  {
+        color: #fff;
+  }   
 
 }
