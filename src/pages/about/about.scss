@@ -5,12 +5,19 @@ page-about {
  ion-card{
      text-align: center;
  }
+ .card-title-md{
+     padding: 0px;
+ }
+ .card-content-md{
+    padding: 10px 5px;
+ }
  .thumb{
     color: #72EBFD;
     background-color: #fff;
     box-shadow: #000000;
     border-radius: 7px;
     margin-bottom: 15px;
+    opacity: 0.98;
  }
  .top-text
   {
