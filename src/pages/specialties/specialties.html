@@ -8,5 +8,24 @@
 
 
 <ion-content padding>
+  <ion-list>
+        <ion-item>
+          <ion-label floating>معلومات</ion-label>
+          <ion-input [(ngModel)]='doctors.info' type="text"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label floating>خطوط الطول</ion-label>
+          <ion-input [(ngModel)]='doctors.latitude'  type="text"></ion-input>
+        </ion-item>
 
+        <ion-item>
+          <ion-label floating>دوائر العرض</ion-label>
+          <ion-input [(ngModel)]='doctors.longitude'  type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <button ion-button block   (click)="adddoctors(doctors)">اضافة     </button>
+        </ion-item>    
+    </ion-list>
 </ion-content>

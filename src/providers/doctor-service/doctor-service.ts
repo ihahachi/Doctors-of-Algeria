@@ -3,19 +3,14 @@ import { Injectable } from '@angular/core';
 import { Doctors } from '../../model/doctors';
 import { AngularFireDatabase } from 'angularfire2/database';
 
-/*
-  Generated class for the DoctorServiceProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class DoctorServiceProvider {
 
   private GpsListDoctor = this.db.list<Doctors>('doctorsmap')
 
   constructor(public db:AngularFireDatabase) {
-    console.log('Hello DoctorServiceProvider Provider');
+    
   }
 
 
@@ -28,11 +23,11 @@ export class DoctorServiceProvider {
   }
 
   updateDoctors(doctors:Doctors){
-    return this.GpsListDoctor.push(doctors);
+    return this.GpsListDoctor.update(doctors.key,doctors);
   }
 
   deleteDoctors(doctors:Doctors){
-    return this.GpsListDoctor.push(doctors);
+    return this.GpsListDoctor.remove(doctors.key);
   }
 
 

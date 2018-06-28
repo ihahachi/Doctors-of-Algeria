@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,AlertController} from 'ionic-angular';
+import { Doctors } from '../../model/doctors';
+import { DoctorServiceProvider } from '../../providers/doctor-service/doctor-service';
 
-/**
- * Generated class for the SpecialtiesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +11,34 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SpecialtiesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  doctors:Doctors={    
+    latitude:'',
+    longitude:'',
+    info:''
+  }
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public doctorServiceProvider:DoctorServiceProvider,
+              public alertCtrl:AlertController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SpecialtiesPage');
+    
   }
 
+
+  adddoctors(doctors){
+    this.doctorServiceProvider.addDoctors(doctors).then(ref => {
+      this.MessageBox()
+    })
+  }
+
+  MessageBox() {
+    let alert = this.alertCtrl.create({
+      title: 'Low battery',
+      subTitle: '10% of battery remaining',
+      buttons: ['Dismiss']
+    });
+    alert.present();
+  }
 }
