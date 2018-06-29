@@ -1,44 +1,36 @@
 <ion-content padding>
+    <ion-refresher (ionRefresh)="doRefresh()">
+        <ion-refresher-content>
+          pullingIcon="arrow-dropdown"
+          pullingText="اسحب للتحديث"
+          refreshingSpinner="circles"
+          refreshingText="جاري التحميل...">
+        </ion-refresher-content>
+      </ion-refresher>
     <br>
     <h1 text-center class="top-text">المفضلة</h1>
     <br><br>
     
-    <ion-card class="thumb">
-        <!-- <img  class="img-card" src="../assets/imgs/doctor.png"/> -->
-        <ion-card-content>
-          <ion-card-title>
-              <button ion-button  full clear>خالدي عبدالرحمان</button>                      
+    <!-- <ion-card class="thumb">
+        <ion-card-content *ngFor='let item of myObject'>
+          <ion-card-title >
+              <button ion-button  full clear>{{item[1]['info']}}</button>                      
             </ion-card-title>
-          <p>
-            طبيب مختص في الأمراض الداخلية
-          </p>
         </ion-card-content>
-      </ion-card>
+      </ion-card> -->
 
-      <ion-card class="thumb">
-          <!-- <img  class="img-card" src="../assets/imgs/doctor.png"/> -->
-          <ion-card-content>
-            <ion-card-title>
-                <button ion-button  full clear>خالدي عبدالرحمان</button>                      
-              </ion-card-title>
-            <p>
-              طبيب مختص في الأمراض الداخلية
-            </p>
-          </ion-card-content>
-        </ion-card>
+      
 
-        <ion-card class="thumb">
-            <!-- <img  class="img-card" src="../assets/imgs/doctor.png"/> -->
-            <ion-card-content>
-              <ion-card-title>
-                  <button ion-button  full clear>خالدي عبدالرحمان</button>                      
-                </ion-card-title>
-              <p>
-                طبيب مختص في الأمراض الداخلية
-              </p>
-            </ion-card-content>
-          </ion-card>
-
-   
+          <ion-list *ngFor='let item of myObject'>
+            <ion-item>
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/doctor.png">
+              </ion-thumbnail>
+              <p class="title">{{item[1]['info']}}</p>
+              <p>{{item[1]['longitude']}}</p>
+              <button ion-button clear item-end>تفاصيل</button>
+            </ion-item>
+          </ion-list>
+          
 
 </ion-content>
