@@ -8,6 +8,7 @@ import { DoctorServiceProvider } from '../../providers/doctor-service/doctor-ser
 
 
 
+
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
@@ -31,35 +32,35 @@ export class AboutPage {
     public db: AngularFireDatabase,
     public doctorServiceProvider: DoctorServiceProvider) {
 
-      this.FillData();
+    this.FillData();
   }
 
 
-  doRefresh() {
-
+  doRefresh() 
+  {
     this.FillData();
 
-    setTimeout(() => {
-      console.log('Async operation has ended');
-      
-    }, 2000);
+    setTimeout(() =>
+     {
+        console.log('Async operation has ended');
+     }, 2000);
   }
 
 
 
-  FillData() {
+  FillData() 
+  {
     this.items = this.db.object('doctorsmap');
     this.items.snapshotChanges().subscribe(action => {
 
-      if (action.payload.val() == null || action.payload.val() == undefined) {
-        console.log('no data')
-      } else {
-
-        this.itemArray.push(action.payload.val())
-        this.myObject = Object.entries(this.itemArray[0])
-
+      if (action.payload.val() == null || action.payload.val() == undefined)
+       {
+          console.log('no data')
+       } else 
+       {
+          this.itemArray.push(action.payload.val())
+          this.myObject = Object.entries(this.itemArray[0])
       }
-
     });
   }
 
