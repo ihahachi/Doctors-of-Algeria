@@ -1,20 +1,16 @@
 page-about {
     ion-content{             
-        background-image: url('../assets/imgs/BG.jpg');  
-        background-size:cover;    
+        //background-image: url('../assets/imgs/BG.jpg') !important;  
+        //background-size:cover !important;    
  }
- ion-card{
-     text-align: center;
+ .scroll-content{
+  background-image: url('../assets/imgs/BG.jpg') !important;  
+  background-size:cover !important; 
  }
  .title{
     font-size: xx-small;
  }
- .card-title-md{
-     padding: 0px;
- }
- .card-content-md{
-    padding: 10px 5px;
- }
+
  .thumb{
     color: #72EBFD;
     background-color: #fff;
@@ -25,11 +21,14 @@ page-about {
  }
  .top-text
   {
-        color: #fff;
+    color: #fff;
   }  
-  .img-card
+  
+  .img-doc
   {
-      max-width: 25%;
-      border-radius: 50px;
-  } 
+    border-radius: 100%;       
+    margin-top: 10px;   
+    width: 80%;
+    height: 80%;
+  }
 }

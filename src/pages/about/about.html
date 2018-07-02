@@ -1,4 +1,7 @@
-<ion-content padding>
+<ion-content padding >
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
     <!-- <ion-refresher (ionRefresh)="doRefresh()">
         <ion-refresher-content
           pullingIcon="arrow-dropdown"
@@ -15,13 +18,13 @@
           <ion-list *ngFor='let item of myObject'>
             <ion-item class="thumb">
               <ion-thumbnail item-start>
-                <img src="assets/imgs/doctor.png">
+                <img class="img-doc" src="assets/imgs/doctor.png">
               </ion-thumbnail>
               <p class="title">{{item[1]['info']}}</p>
               <p>{{item[1]['longitude']}}</p>
               <button ion-button outline  item-end>تفاصيل</button>
             </ion-item>
           </ion-list>
-          
+    
 
 </ion-content>
