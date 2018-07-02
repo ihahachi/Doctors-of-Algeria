@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 import { Doctors } from '../../model/doctors';
@@ -30,8 +30,9 @@ export class AboutPage {
 
   constructor(public navCtrl: NavController,
     public db: AngularFireDatabase,
-    public doctorServiceProvider: DoctorServiceProvider) {
-
+    public doctorServiceProvider: DoctorServiceProvider,
+    public loadingCtrl: LoadingController) {
+    this.presentLoadingDefault();
     this.FillData();
   }
 
@@ -63,6 +64,22 @@ export class AboutPage {
       }
     });
   }
+
+
+  presentLoadingDefault() {
+    let loading = this.loadingCtrl.create({
+      content: 'جاري تحميل البيانات '
+    });
+  
+    loading.present();
+  
+    setTimeout(() => {
+      loading.dismiss();
+    }, 2000);
+  }
+
+
+
 
 
 

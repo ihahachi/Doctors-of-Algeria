@@ -1,6 +1,7 @@
 page-about {
     ion-content{             
-        background-image: url('../assets/imgs/BG.jpg');     
+        background-image: url('../assets/imgs/BG.jpg');  
+        background-size:cover;    
  }
  ion-card{
      text-align: center;
@@ -20,7 +21,7 @@ page-about {
     box-shadow: #000000;
     border-radius: 7px;
     margin-bottom: 15px;
-    opacity: 0.98;
+    opacity: 0.90;
  }
  .top-text
   {
