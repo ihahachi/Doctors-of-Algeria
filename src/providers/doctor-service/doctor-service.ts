@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+//import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Doctors } from '../../model/doctors';
 import { AngularFireDatabase } from 'angularfire2/database';

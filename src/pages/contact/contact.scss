@@ -1,6 +1,7 @@
 page-contact {
     ion-content{             
-        background-image: url('../assets/imgs/BG.jpg');     
+        background-image: url('../assets/imgs/BG.jpg') !important;  
+        background-size:cover !important;    
  }
  .top-text
   {

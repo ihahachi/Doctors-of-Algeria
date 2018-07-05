@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController } from 'ionic-angular';
+import { NavController, LoadingController ,ToastController} from 'ionic-angular';
 import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
-import { Observable } from 'rxjs';
-import { Doctors } from '../../model/doctors';
+//import { Observable } from 'rxjs';
+//import { Doctors } from '../../model/doctors';
 import { DoctorServiceProvider } from '../../providers/doctor-service/doctor-service';
-
+import { Network } from '@ionic-native/network';
 
 
 
@@ -15,11 +15,7 @@ import { DoctorServiceProvider } from '../../providers/doctor-service/doctor-ser
 })
 export class AboutPage {
 
-  doctors: Doctors = {
-    latitude: '',
-    longitude: '',
-    info: ''
-  }
+
 
   itemArray = [];
   myObject = []
@@ -29,23 +25,36 @@ export class AboutPage {
 
 
   constructor(public navCtrl: NavController,
-    public db: AngularFireDatabase,
-    public doctorServiceProvider: DoctorServiceProvider,
-    public loadingCtrl: LoadingController) {
+              public db: AngularFireDatabase,
+              public doctorServiceProvider: DoctorServiceProvider,
+              public loadingCtrl: LoadingController,
+              private network: Network,
+              private toastCtrl: ToastController) {
+
+
     this.FillData();
     this.presentLoadingCustom();
+
+    // watch network for a disconnect
+    let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
+      this.presentToast('لايوجد انترنات')      
+    });
+    // watch network for a connect
+    let connectSubscription = this.network.onConnect().subscribe(() => {
+      this.presentToast('تم الأتصال')      
+    });
+
   }
 
 
 
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);
-    this.FillData();
     this.presentLoadingCustom();
-    setTimeout(() => {
-      console.log('Async operation has ended');
-      refresher.complete();
-    }, 2000);
+    this.FillData();
+    
+    refresher.complete();
+
   }
 
 
@@ -59,14 +68,18 @@ export class AboutPage {
       } else {
         this.itemArray.push(action.payload.val())
         this.myObject = Object.entries(this.itemArray[0])
+        console.log('Getting data...');
+        console.log(this.myObject);
       }
     });
+
+
   }
 
-  
 
 
-//Loanding function.
+
+  //Loanding function.
   presentLoadingCustom() {
     let loading = this.loadingCtrl.create({
       spinner: 'ios',
@@ -77,17 +90,26 @@ export class AboutPage {
         </div>`,
       duration: 1000
     });
-  
+
     loading.onDidDismiss(() => {
       console.log('Dismissed loading');
     });
-  
+
     loading.present();
   }
 
-
-
-
-
-
+  // Show Message Alter
+  presentToast(Msg) {
+    let toast = this.toastCtrl.create({
+      message: Msg,
+      duration: 2000,
+      position: 'top'
+    });
+  
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+  
+    toast.present();
+  }
 }

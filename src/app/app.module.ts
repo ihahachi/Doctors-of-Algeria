@@ -4,13 +4,14 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { Network } from '@ionic-native/network';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { NearerPage } from '../pages/nearer/nearer';
-import { SearchPage } from '../pages/search/search';
+//import { NearerPage } from '../pages/nearer/nearer';
+//import { SearchPage } from '../pages/search/search';
 import { SpecialtiesPage } from '../pages/specialties/specialties';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -36,15 +37,18 @@ export const FirbaseConfig = {
     ContactPage,
     HomePage,
     TabsPage,
-    NearerPage,
-    SearchPage,
     SpecialtiesPage
+   // NearerPage,
+   // SearchPage,
+    
+    
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FirbaseConfig),
     AngularFireDatabaseModule
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -53,15 +57,16 @@ export const FirbaseConfig = {
     ContactPage,
     HomePage,
     TabsPage,
-    NearerPage,
-    SearchPage,
+    //NearerPage,
+    //SearchPage,
     SpecialtiesPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DoctorServiceProvider
+    DoctorServiceProvider,
+    Network
   ]
 })
 export class AppModule {}
