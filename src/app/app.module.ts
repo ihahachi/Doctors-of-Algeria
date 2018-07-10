@@ -37,7 +37,7 @@ export const FirbaseConfig = {
     ContactPage,
     HomePage,
     TabsPage,
-   // SpecialtiesPage
+    SpecialtiesPage
    // NearerPage,
    // SearchPage,
     

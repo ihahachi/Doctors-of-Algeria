@@ -4,7 +4,7 @@ import { Doctors } from '../../model/doctors';
 import { DoctorServiceProvider } from '../../providers/doctor-service/doctor-service';
 
 
-@IonicPage()
+
 @Component({
   selector: 'page-specialties',
   templateUrl: 'specialties.html',

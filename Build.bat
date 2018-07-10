@@ -1,1 +1,1 @@
-ionic cordova run android --prod --release
+npm install firebase@4.12.1
