@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,AlertController} from 'ionic-angular';
 import { Doctors } from '../../model/doctors';
 import { DoctorServiceProvider } from '../../providers/doctor-service/doctor-service';
-
-
+import { AboutPage } from '../about/about';
 
 @Component({
   selector: 'page-specialties',
@@ -53,4 +52,9 @@ export class SpecialtiesPage {
     });
     alert.present();
   }
+  GotoList(title){
+    this.navCtrl.push(AboutPage,{data:title});
+    console.log(title);
+  }
 }
+

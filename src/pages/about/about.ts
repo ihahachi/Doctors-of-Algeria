@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController ,ToastController} from 'ionic-angular';
+import { NavController, LoadingController ,ToastController, NavParams} from 'ionic-angular';
 import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 //import { Observable } from 'rxjs';
 //import { Doctors } from '../../model/doctors';
@@ -20,6 +20,7 @@ export class AboutPage {
   itemArray = [];
   myObject = []
   items: AngularFireObject<any>;
+  title : string;
 
 
 
@@ -29,8 +30,10 @@ export class AboutPage {
               public doctorServiceProvider: DoctorServiceProvider,
               public loadingCtrl: LoadingController,
               private network: Network,
-              private toastCtrl: ToastController) {
+              private toastCtrl: ToastController,
+              public navParams: NavParams) {
 
+      this.title = navParams.get('data');
 
     this.FillData();
     this.presentLoadingCustom();
