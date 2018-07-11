@@ -68,8 +68,6 @@ export class AboutPage {
       } else {
         this.itemArray.push(action.payload.val())
         this.myObject = Object.entries(this.itemArray[0])
-        console.log('Getting data...');
-        console.log(this.myObject);
       }
     });
 
@@ -92,7 +90,6 @@ export class AboutPage {
     });
 
     loading.onDidDismiss(() => {
-      console.log('Dismissed loading');
     });
 
     loading.present();
@@ -107,7 +104,7 @@ export class AboutPage {
     });
   
     toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
+      
     });
   
     toast.present();
