@@ -14,7 +14,19 @@ export class SpecialtiesPage {
   doctors:Doctors={    
     latitude:'',
     longitude:'',
-    info:''
+    info:'',
+    name : '',
+    specialty_01 : '',
+    specialty_02 : '',
+    wkp_Type : '',
+    wkp_Usual_Name : '',
+    address : '',
+    addr_Building : '',
+    mobile_Number : '',
+    phone_Number : '',
+    fax_Number : '',
+    email : '',
+    sex : ''
   }
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
