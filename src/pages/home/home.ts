@@ -18,7 +18,7 @@ export class HomePage {
   }
 
   GotoSpecialties(){
-    this.navCtrl.push(SpecialtiesPage)
+    this.navCtrl.setRoot(SpecialtiesPage)
     console.log("Go to Specialties")
   }
 
