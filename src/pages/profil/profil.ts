@@ -9,9 +9,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ProfilPage {
 
   info : string;
+  lat : string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.info = navParams.get('data');
+    this.info = navParams.get('data_info');
+    this.lat = navParams.get('data_lat');
   }
 
   ionViewDidLoad() {

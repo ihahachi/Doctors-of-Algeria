@@ -5,5 +5,18 @@ page-profil {
     }
     .top-text{
         color: #fff;
-    } 
+    }
+    .img-profil{
+        border-radius: 50%;
+        width: 35%;
+        opacity: 0.80;
+    }
+    .thumb{
+        color: #72EBFD;
+        background-color: #fff;
+        box-shadow: #000000;
+        border-radius: 7px;
+        margin-bottom: 15px;
+        opacity: 0.80;
+     }
 }

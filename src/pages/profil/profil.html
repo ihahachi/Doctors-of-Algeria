@@ -1,4 +1,29 @@
 <ion-content padding>
   <br>
-  <h4 text-center class="top-text">{{ info }}</h4>
+  <ion-row justify-content-center align-items-center >
+    <ion-card class="img-profil">
+      <img src="assets/imgs/doctor.png" />
+    </ion-card>
+  </ion-row>
+  <ion-row justify-content-center align-items-center >
+    <ion-card class="thumb">
+      <ion-card-content>
+        <ion-card-title>
+          <h4 text-center>{{ info }}</h4>
+          </ion-card-title>
+        <ion-item-group>
+          <ion-item-divider color="light">معلومات عامة</ion-item-divider>
+          <ion-item>طبيب مختص في أمراض</ion-item>
+          <ion-item>{{ lat }}</ion-item>
+          <ion-item-divider color="light">معلومات عامة</ion-item-divider>
+          <ion-item>طبيب مختص في أمراض</ion-item>
+          <ion-item>{{ lat }}</ion-item>
+          <ion-item-divider color="light">معلومات عامة</ion-item-divider>
+          <ion-item>طبيب مختص في أمراض</ion-item>
+          <ion-item>{{ lat }}</ion-item>
+        </ion-item-group>
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+  
 </ion-content>
