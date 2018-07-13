@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController ,ToastController, NavParams} from 'ionic-angular';
 import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
-//import { Observable } from 'rxjs';
+import { ProfilPage } from '../profil/profil';
 //import { Doctors } from '../../model/doctors';
 import { DoctorServiceProvider } from '../../providers/doctor-service/doctor-service';
 import { Network } from '@ionic-native/network';
@@ -111,5 +111,9 @@ export class AboutPage {
     });
   
     toast.present();
+  }
+  GotoProfil(info){
+    this.navCtrl.push(ProfilPage,{data:info});
+    console.log(info);
   }
 }

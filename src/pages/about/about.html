@@ -23,7 +23,7 @@
               </ion-thumbnail>
               <p class="title">{{item[1]['info']}}</p>
               <p>{{item[1]['longitude']}}</p>
-              <button ion-button outline  item-end>تفاصيل</button>
+              <button ion-button outline  item-end (click)="GotoProfil(item[1]['info'])">تفاصيل</button>
             </ion-item>
           </ion-list>
     
