@@ -46,9 +46,9 @@ export class SpecialtiesPage {
 
   MessageBox() {
     let alert = this.alertCtrl.create({
-      title: 'Low battery',
-      subTitle: '10% of battery remaining',
-      buttons: ['Dismiss']
+      title: 'حفظ',
+      subTitle: 'لقد تمت العملية بنجاح, شكرا',
+      buttons: ['حسنا']
     });
     alert.present();
   }

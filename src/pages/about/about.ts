@@ -106,9 +106,9 @@ export class AboutPage {
       position: 'top'
     });
   
-    toast.onDidDismiss(() => {
+     toast.onDidDismiss(() => {
       
-    });
+     });
   
     toast.present();
   }
