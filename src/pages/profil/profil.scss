@@ -8,7 +8,7 @@ page-profil {
     }
     .img-profil{
         border-radius: 50%;
-        width: 35%;
+        width: 25%;
         opacity: 0.80;
     }
     .thumb{
@@ -18,5 +18,9 @@ page-profil {
         border-radius: 7px;
         margin-bottom: 15px;
         opacity: 0.80;
+     }
+     ion-item-divider{
+        border-radius: 7px;
+        box-shadow: #000000;
      }
 }

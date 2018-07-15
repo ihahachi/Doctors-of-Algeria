@@ -112,8 +112,11 @@ export class AboutPage {
   
     toast.present();
   }
-  GotoProfil(info,lat,name){
-    this.navCtrl.push(ProfilPage,{data_info:info,data_lat:lat,data_name:name});
+  GotoProfil(info,lat,name,address){
+    this.navCtrl.push(ProfilPage,{data_info:info,
+                                                  data_lat:lat,
+                                                  data_name:name,
+                                                  data_address:address});
     console.log(info);
   }
 }
