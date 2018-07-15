@@ -18,9 +18,14 @@
               <ion-thumbnail item-start>
                 <img class="img-doc" src="assets/imgs/doctor.png">
               </ion-thumbnail>
-              <p class="title">{{item[1]['name']}}</p>
-              <p>{{item[1]['specialty_01']}}</p>
-              <button ion-button outline  item-end (click)="GotoProfil(item[1]['info'],item[1]['longitude'])">تفاصيل</button>
+              
+              <p>{{item[1]['name']}}</p>
+              <p class="title">{{item[1]['address']}} / {{item[1]['addr_Building']}}</p>
+              <button ion-button outline  item-end (click)="GotoProfil(
+                                                            item[1]['info'],
+                                                            item[1]['longitude'],
+                                                            item[1]['name']
+                                                            )">تفاصيل</button>
             </ion-item>
           </ion-list>
     
