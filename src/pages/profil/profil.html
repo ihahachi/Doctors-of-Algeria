@@ -1,14 +1,14 @@
-<ion-content >
+<ion-content>
   <br>
-  <ion-row justify-content-center align-items-center >
+  <ion-row justify-content-center align-items-center>
     <ion-card class="img-profil">
       <img src="assets/imgs/doctor-male.png" />
     </ion-card>
   </ion-row>
-  <ion-row justify-content-center align-items-center >
+  <ion-row justify-content-center align-items-center>
     <ion-card class="thumb">
       <ion-card-content>
-          <ion-item-divider class="name" color="">{{ name }}</ion-item-divider>
+        <ion-item-divider class="name" color="">{{ name }}</ion-item-divider>
         <ion-item-group>
           <ion-item-divider text-center color="light">الإختصاص</ion-item-divider>
           <ion-item>طبيب مختص في أمراض</ion-item>
@@ -17,14 +17,121 @@
           <ion-item>يعمل في : عيادة خاصة</ion-item>
           <ion-item>تابع لـ : عيادة شكالي السعيد</ion-item>
           <ion-item-divider text-center color="light">التواصل مع الطبيب</ion-item-divider>
-          <ion-item>الهاتف : 027781223</ion-item>
-          <ion-item>الهاتف : 027874523</ion-item>
-          <ion-item>الفاكس : 027184566</ion-item>
-          <ion-item>البريد الإلكتروني : iha2007hachi@gmail.com</ion-item>
-          <ion-item>العنوان : {{ address }}</ion-item>
+          <ion-list padding-top>
+            <ion-item-sliding>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/call.png">
+                </ion-avatar>
+                <h2>الهاتف : 027781223</h2>
+              </ion-item>
+              <ion-item-options side="right">
+                <button ion-button color="secondary">
+                  <ion-icon name="call"></ion-icon>
+                  مكالمة
+                </button>
+                <button ion-button color="primary">
+                  <ion-icon name="text"></ion-icon>
+                  رسالة
+                </button>
+              </ion-item-options>
+              <ion-item-options side="left">
+                <button ion-button color="primary">
+                  <ion-icon name="md-share"></ion-icon>
+                  مشاركة
+                </button>
+              </ion-item-options>
+            </ion-item-sliding>
+            <ion-item-sliding>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/call.png">
+                </ion-avatar>
+                <h2>الهاتف : 027781223</h2>
+              </ion-item>
+              <ion-item-options side="right">
+                <button ion-button color="secondary">
+                  <ion-icon name="call"></ion-icon>
+                  مكالمة
+                </button>
+                <button ion-button color="primary">
+                  <ion-icon name="text"></ion-icon>
+                  رسالة
+                </button>
+              </ion-item-options>
+              <ion-item-options side="left">
+                <button ion-button color="primary">
+                  <ion-icon name="md-share"></ion-icon>
+                  مشاركة
+                </button>
+              </ion-item-options>
+            </ion-item-sliding>
+            <ion-item-sliding>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/fax.png">
+                </ion-avatar>
+                <h2>الفاكس : 027781223</h2>
+              </ion-item>
+              <ion-item-options side="right">
+                <button ion-button color="secondary">
+                  <ion-icon name="call"></ion-icon>
+                  مكالمة
+                </button>
+              </ion-item-options>
+              <ion-item-options side="left">
+                <button ion-button color="primary">
+                  <ion-icon name="md-share"></ion-icon>
+                  مشاركة
+                </button>
+              </ion-item-options>
+            </ion-item-sliding>
+
+            <ion-item-sliding>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/map.png">
+                </ion-avatar>
+                <h2>العنوان : {{ address }}</h2>
+              </ion-item>
+              <ion-item-options side="right">
+                <button ion-button color="light">
+                  <ion-icon name="ios-navigate"></ion-icon>
+                  إذهب إلى
+                </button>
+              </ion-item-options>
+              <ion-item-options side="left">
+                <button ion-button color="primary">
+                  <ion-icon name="md-share"></ion-icon>
+                  مشاركة
+                </button>
+              </ion-item-options>
+            </ion-item-sliding>
+
+            <ion-item-sliding>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/email.png">
+                </ion-avatar>
+                <h2>iha2007hachi@gmail.com</h2>
+              </ion-item>
+              <ion-item-options side="right">
+                <button ion-button color="light">
+                  <ion-icon name="md-mail"></ion-icon>
+                  مراسلة
+                </button>
+              </ion-item-options>
+              <ion-item-options side="left">
+                <button ion-button color="primary">
+                  <ion-icon name="md-share"></ion-icon>
+                  مشاركة
+                </button>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-list>
         </ion-item-group>
       </ion-card-content>
     </ion-card>
   </ion-row>
-  
+
 </ion-content>
