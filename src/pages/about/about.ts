@@ -5,7 +5,8 @@ import { ProfilPage } from '../profil/profil';
 //import { Doctors } from '../../model/doctors';
 import { DoctorServiceProvider } from '../../providers/doctor-service/doctor-service';
 import { Network } from '@ionic-native/network';
-
+import { AngularFireList } from 'angularfire2/database/interfaces';
+import { Observable } from 'rxjs';
 
 
 
@@ -19,7 +20,7 @@ export class AboutPage {
 
   itemArray = [];
   myObject = []
-  items: AngularFireObject<any>;
+  items: Observable<any[]>;
   title : string;
 
 
@@ -63,18 +64,9 @@ export class AboutPage {
 
   // Get Data From Firbase.
   FillData() {
-    this.items = this.db.object('doctorsmap');
-    this.items.snapshotChanges().subscribe(action => {
-
-      if (action.payload.val() == null || action.payload.val() == undefined) {
-        console.log('no data')
-      } else {
-        this.itemArray.push(action.payload.val())
-        this.myObject = Object.entries(this.itemArray[0])
-      }
-    });
-
-
+    this.items = this.db.list('doctorsmap',
+    ref => ref.orderByChild('specialty_01').equalTo(this.title)).valueChanges();
+   
   }
 
 

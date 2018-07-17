@@ -10,30 +10,30 @@
   <br>
 
 
-  <ion-list *ngFor='let item of myObject'>
+  <ion-list *ngFor='let item of items | async'>
     <ion-item class="thumb">
       <ion-thumbnail item-start>
         <img class="img-doc" src="assets/imgs/doctor.png">
       </ion-thumbnail>
 
-      <p>{{item[1]['name']}}</p>
-      <p class="title">{{item[1]['address']}} / {{item[1]['addr_Building']}}</p>
+      <p>{{item.name}}</p>
+       <p class="title">{{item.address}} / {{item.addr_Building}}</p>
       <button ion-button outline item-end (click)="GotoProfil(
-                                                                item[1]['latitude'],
-                                                                item[1]['longitude'],
-                                                                item[1]['info'],
-                                                                item[1]['name'],
-                                                                item[1]['specialty_01'],
-                                                                item[1]['specialty_02'],
-                                                                item[1]['wkp_Type'],
-                                                                item[1]['wkp_Usual_Name'],
-                                                                item[1]['address'],
-                                                                item[1]['addr_Building'],
-                                                                item[1]['mobile_Number'],
-                                                                item[1]['phone_Number'],
-                                                                item[1]['fax_Number'],
-                                                                item[1]['email'],
-                                                                item[1]['sex']
+                                                                item.latitude,
+                                                                item.longitude,
+                                                                item.info,
+                                                                item.name,
+                                                                item.specialty_01,
+                                                                item.specialty_02,
+                                                                item.wkp_Type,
+                                                                item.wkp_Usual_Name,
+                                                                item.address,
+                                                                item.addr_Building,
+                                                                item.mobile_Number,
+                                                                item.phone_Number,
+                                                                item.fax_Number,
+                                                                item.email,
+                                                                item.sex
                                                             )">تفاصيل</button>
     </ion-item>
   </ion-list>

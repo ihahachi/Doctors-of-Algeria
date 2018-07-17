@@ -11,8 +11,8 @@
         <ion-item-divider class="name" color="">{{ name }}</ion-item-divider>
         <ion-item-group>
           <ion-item-divider text-center color="light">الإختصاص</ion-item-divider>
-          <ion-item *ngIf="specialty_01.length >0">{{specialty_01}}</ion-item>
-          <ion-item *ngIf="specialty_02.length >0">{{specialty_02}}</ion-item>
+          <ion-item text-center *ngIf="specialty_01.length >0">{{specialty_01}}</ion-item>
+          <ion-item text-center *ngIf="specialty_02.length >0">{{specialty_02}}</ion-item>
           <ion-item-divider text-center color="light">العمل</ion-item-divider>
           <ion-item *ngIf="wkp_Type.length >0">يعمل في : {{wkp_Type}}</ion-item>
           <ion-item *ngIf="wkp_Usual_Name.length >0">تابع لـ : {{wkp_Usual_Name}}</ion-item>
