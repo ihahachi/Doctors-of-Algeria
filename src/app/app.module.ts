@@ -7,6 +7,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { Network } from '@ionic-native/network';
 import { CallNumber } from '@ionic-native/call-number';
 import { SMS } from '@ionic-native/sms';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -70,6 +71,7 @@ export const FirbaseConfig = {
     DoctorServiceProvider,
     CallNumber,
     SMS,
+    SocialSharing,
     Network
   ]
 })

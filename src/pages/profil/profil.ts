@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
 import { SMS } from '@ionic-native/sms';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 
 @Component({
@@ -29,7 +30,8 @@ export class ProfilPage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private callNumber: CallNumber,
-              private sms: SMS) {
+              private sms: SMS,
+              private socialSharing: SocialSharing) {
 
     this.latitude = navParams.get('data_latitude');
     this.longitude = navParams.get('data_longitude');
@@ -61,6 +63,13 @@ export class ProfilPage {
   SendSMS(num){
     this.sms.send(num, '');
     console.log(num + ' sending...')
+  }
+
+  ShareDoctor(name,num,city){
+    let msg : string;
+    msg=name +" " + num + " " + city
+    this.socialSharing.share(msg,name);
+    console.log(name +" " + num + " " + city + ' Sharing...')
   }
 
 }
