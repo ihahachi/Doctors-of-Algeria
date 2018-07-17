@@ -11,14 +11,14 @@
         <ion-item-divider class="name" color="">{{ name }}</ion-item-divider>
         <ion-item-group>
           <ion-item-divider text-center color="light">الإختصاص</ion-item-divider>
-          <ion-item>{{specialty_01}}</ion-item>
-          <ion-item>{{specialty_02}}</ion-item>
+          <ion-item *ngIf="specialty_01.length >0">{{specialty_01}}</ion-item>
+          <ion-item *ngIf="specialty_02.length >0">{{specialty_02}}</ion-item>
           <ion-item-divider text-center color="light">العمل</ion-item-divider>
-          <ion-item>يعمل في : {{wkp_Type}}</ion-item>
-          <ion-item>تابع لـ : {{wkp_Usual_Name}}</ion-item>
+          <ion-item *ngIf="wkp_Type.length >0">يعمل في : {{wkp_Type}}</ion-item>
+          <ion-item *ngIf="wkp_Usual_Name.length >0">تابع لـ : {{wkp_Usual_Name}}</ion-item>
           <ion-item-divider text-center color="light">التواصل مع الطبيب</ion-item-divider>
           <ion-list padding-top>
-            <ion-item-sliding>
+            <ion-item-sliding *ngIf="mobile_Number.length >0">
               <ion-item>
                 <ion-avatar item-start>
                   <img src="assets/imgs/call.png">
@@ -42,7 +42,7 @@
                 </button>
               </ion-item-options>
             </ion-item-sliding>
-            <ion-item-sliding>
+            <ion-item-sliding *ngIf="phone_Number.length >0">
               <ion-item>
                 <ion-avatar item-start>
                   <img src="assets/imgs/call.png">
@@ -66,7 +66,7 @@
                 </button>
               </ion-item-options>
             </ion-item-sliding>
-            <ion-item-sliding>
+            <ion-item-sliding *ngIf="fax_Number.length >0">
               <ion-item>
                 <ion-avatar item-start>
                   <img src="assets/imgs/fax.png">
@@ -87,7 +87,7 @@
               </ion-item-options>
             </ion-item-sliding>
 
-            <ion-item-sliding>
+            <ion-item-sliding *ngIf="fax_Number.address >0">
               <ion-item>
                 <ion-avatar item-start>
                   <img src="assets/imgs/map.png">
@@ -108,7 +108,7 @@
               </ion-item-options>
             </ion-item-sliding>
 
-            <ion-item-sliding>
+            <ion-item-sliding *ngIf="fax_Number.email >0">
               <ion-item>
                 <ion-avatar item-start>
                   <img src="assets/imgs/email.png">
