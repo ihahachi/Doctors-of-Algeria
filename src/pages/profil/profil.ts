@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CallNumber } from '@ionic-native/call-number';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class ProfilPage {
   email : string;
   sex : string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private callNumber: CallNumber) {
     this.latitude = navParams.get('data_latitude');
     this.longitude = navParams.get('data_longitude');
     this.info = navParams.get('data_info');
@@ -44,6 +45,13 @@ export class ProfilPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilPage');
+  }
+
+  CallNum(num){
+    this.callNumber.callNumber(num, true)
+      .then(res => console.log('Launched dialer!', res))
+      .catch(err => console.log('Error launching dialer', err));
+      console.log(num + ' calling...')
   }
 
 }

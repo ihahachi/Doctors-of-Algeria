@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { Network } from '@ionic-native/network';
+import { CallNumber } from '@ionic-native/call-number';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -66,6 +67,7 @@ export const FirbaseConfig = {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DoctorServiceProvider,
+    CallNumber,
     Network
   ]
 })

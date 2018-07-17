@@ -27,7 +27,7 @@
                 <h2>الهاتف : {{mobile_Number}}</h2>
               </ion-item>
               <ion-item-options side="right">
-                <button ion-button color="secondary">
+                <button ion-button color="secondary" (click)="CallNum(mobile_Number)">
                   <ion-icon name="call"></ion-icon>
                   مكالمة
                 </button>
@@ -51,7 +51,7 @@
                 <h2>الهاتف : {{phone_Number}}</h2>
               </ion-item>
               <ion-item-options side="right">
-                <button ion-button color="secondary">
+                <button ion-button color="secondary" (click)="CallNum(phone_Number)">
                   <ion-icon name="call"></ion-icon>
                   مكالمة
                 </button>
@@ -75,7 +75,7 @@
                 <h2>الفاكس : {{fax_Number}}</h2>
               </ion-item>
               <ion-item-options side="right">
-                <button ion-button color="secondary">
+                <button ion-button color="secondary" (click)="CallNum(fax_Number)">
                   <ion-icon name="call"></ion-icon>
                   مكالمة
                 </button>
