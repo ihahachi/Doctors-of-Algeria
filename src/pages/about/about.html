@@ -13,7 +13,8 @@
   <ion-list *ngFor='let item of items | async'>
     <ion-item class="thumb">
       <ion-thumbnail item-start>
-        <img class="img-doc" src="assets/imgs/doctor.png">
+        <img class="img-doc" *ngIf="item.sex=='M'" src="assets/imgs/doctor-male.png" />
+      <img class="img-doc" *ngIf="item.sex=='F'" src="assets/imgs/doctor-female.png" />
       </ion-thumbnail>
 
       <p>{{item.name}}</p>

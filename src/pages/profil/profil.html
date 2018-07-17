@@ -2,7 +2,8 @@
   <br>
   <ion-row justify-content-center align-items-center>
     <ion-card class="img-profil">
-      <img src="assets/imgs/doctor-male.png" />
+      <img *ngIf="sex=='M'" src="assets/imgs/doctor-male.png" />
+      <img *ngIf="sex=='F'" src="assets/imgs/doctor-female.png" />
     </ion-card>
   </ion-row>
   <ion-row justify-content-center align-items-center>
