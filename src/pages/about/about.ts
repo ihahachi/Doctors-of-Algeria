@@ -112,11 +112,26 @@ export class AboutPage {
   
     toast.present();
   }
-  GotoProfil(info,lat,name,address){
-    this.navCtrl.push(ProfilPage,{data_info:info,
-                                                  data_lat:lat,
-                                                  data_name:name,
-                                                  data_address:address});
+  GotoProfil(latitude,longitude,info,name,specialty_01,
+    specialty_02,wkp_Type,wkp_Usual_Name,address,addr_Building,
+    mobile_Number,phone_Number,fax_Number,email,sex){
+
+    this.navCtrl.push(ProfilPage,{data_latitude:latitude,
+                                  data_longitude:longitude,
+                                  data_info:info,
+                                  data_name:name,
+                                  data_specialty_01:specialty_01,
+                                  data_specialty_02:specialty_02,
+                                  data_wkp_Type:wkp_Type,
+                                  data_wkp_Usual_Name:wkp_Usual_Name,
+                                  data_address:address,
+                                  data_addr_Building:addr_Building,
+                                  data_mobile_Number:mobile_Number,
+                                  data_phone_Number:phone_Number,
+                                  data_fax_Number:fax_Number,
+                                  data_email:email,
+                                  data_sex:sex
+                                             });
     console.log(info);
   }
 }

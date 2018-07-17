@@ -11,11 +11,11 @@
         <ion-item-divider class="name" color="">{{ name }}</ion-item-divider>
         <ion-item-group>
           <ion-item-divider text-center color="light">الإختصاص</ion-item-divider>
-          <ion-item>طبيب مختص في أمراض</ion-item>
-          <ion-item>طبيب مختص في أمراض</ion-item>
+          <ion-item>{{specialty_01}}</ion-item>
+          <ion-item>{{specialty_02}}</ion-item>
           <ion-item-divider text-center color="light">العمل</ion-item-divider>
-          <ion-item>يعمل في : عيادة خاصة</ion-item>
-          <ion-item>تابع لـ : عيادة شكالي السعيد</ion-item>
+          <ion-item>يعمل في : {{wkp_Type}}</ion-item>
+          <ion-item>تابع لـ : {{wkp_Usual_Name}}</ion-item>
           <ion-item-divider text-center color="light">التواصل مع الطبيب</ion-item-divider>
           <ion-list padding-top>
             <ion-item-sliding>
@@ -23,7 +23,7 @@
                 <ion-avatar item-start>
                   <img src="assets/imgs/call.png">
                 </ion-avatar>
-                <h2>الهاتف : 027781223</h2>
+                <h2>الهاتف : {{mobile_Number}}</h2>
               </ion-item>
               <ion-item-options side="right">
                 <button ion-button color="secondary">
@@ -47,7 +47,7 @@
                 <ion-avatar item-start>
                   <img src="assets/imgs/call.png">
                 </ion-avatar>
-                <h2>الهاتف : 027781223</h2>
+                <h2>الهاتف : {{phone_Number}}</h2>
               </ion-item>
               <ion-item-options side="right">
                 <button ion-button color="secondary">
@@ -71,7 +71,7 @@
                 <ion-avatar item-start>
                   <img src="assets/imgs/fax.png">
                 </ion-avatar>
-                <h2>الفاكس : 027781223</h2>
+                <h2>الفاكس : {{fax_Number}}</h2>
               </ion-item>
               <ion-item-options side="right">
                 <button ion-button color="secondary">
@@ -92,7 +92,7 @@
                 <ion-avatar item-start>
                   <img src="assets/imgs/map.png">
                 </ion-avatar>
-                <h2>العنوان : {{ address }}</h2>
+                <h2>العنوان : {{ address }}/{{addr_Building}}</h2>
               </ion-item>
               <ion-item-options side="right">
                 <button ion-button color="light">
@@ -113,7 +113,7 @@
                 <ion-avatar item-start>
                   <img src="assets/imgs/email.png">
                 </ion-avatar>
-                <h2>iha2007hachi@gmail.com</h2>
+                <h2>{{email}}</h2>
               </ion-item>
               <ion-item-options side="right">
                 <button ion-button color="light">

@@ -19,10 +19,21 @@
       <p>{{item[1]['name']}}</p>
       <p class="title">{{item[1]['address']}} / {{item[1]['addr_Building']}}</p>
       <button ion-button outline item-end (click)="GotoProfil(
-                                                                item[1]['info'],
+                                                                item[1]['latitude'],
                                                                 item[1]['longitude'],
+                                                                item[1]['info'],
                                                                 item[1]['name'],
-                                                                item[1]['address']
+                                                                item[1]['specialty_01'],
+                                                                item[1]['specialty_02'],
+                                                                item[1]['wkp_Type'],
+                                                                item[1]['wkp_Usual_Name'],
+                                                                item[1]['address'],
+                                                                item[1]['addr_Building'],
+                                                                item[1]['mobile_Number'],
+                                                                item[1]['phone_Number'],
+                                                                item[1]['fax_Number'],
+                                                                item[1]['email'],
+                                                                item[1]['sex']
                                                             )">تفاصيل</button>
     </ion-item>
   </ion-list>
