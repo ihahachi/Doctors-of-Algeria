@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CallNumber } from '@ionic-native/call-number';
+import { SMS } from '@ionic-native/sms';
 
 
 @Component({
@@ -25,7 +26,11 @@ export class ProfilPage {
   email : string;
   sex : string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private callNumber: CallNumber) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private callNumber: CallNumber,
+              private sms: SMS) {
+
     this.latitude = navParams.get('data_latitude');
     this.longitude = navParams.get('data_longitude');
     this.info = navParams.get('data_info');
@@ -52,6 +57,10 @@ export class ProfilPage {
       .then(res => console.log('Launched dialer!', res))
       .catch(err => console.log('Error launching dialer', err));
       console.log(num + ' calling...')
+  }
+  SendSMS(num){
+    this.sms.send(num, '');
+    console.log(num + ' sending...')
   }
 
 }

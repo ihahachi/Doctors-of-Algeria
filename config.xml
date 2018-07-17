@@ -86,4 +86,5 @@
     <engine name="android" spec="7.0.0" />
     <engine name="browser" spec="5.0.3" />
     <plugin name="call-number" spec="1.0.4" />
+    <plugin name="cordova-sms-plugin" spec="^0.1.11" />
 </widget>
