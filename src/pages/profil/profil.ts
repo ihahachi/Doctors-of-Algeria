@@ -65,11 +65,11 @@ export class ProfilPage {
     console.log(num + ' sending...')
   }
 
-  ShareDoctor(name,num,city){
+  ShareDoctor(name,num,city,specialty){
     let msg : string;
-    msg=name +" " + num + " " + city
+    msg=name +" "+ specialty + " الرقم " + num + " " + city
     this.socialSharing.share(msg,name);
-    console.log(name +" " + num + " " + city + ' Sharing...')
+    console.log(name + " " + specialty +" الرقم " + num + " " + city + ' Sharing...')
   }
 
 }
