@@ -53,7 +53,7 @@ export class SpecialtiesPage {
     alert.present();
   }
   GotoList(title){
-    this.navCtrl.push(AboutPage,{data:title});
+    this.navCtrl.setRoot(AboutPage,{data:title});
     console.log(title);
   }
 }
