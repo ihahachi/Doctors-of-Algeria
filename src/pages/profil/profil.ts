@@ -74,6 +74,6 @@ export class ProfilPage {
     console.log(name + " " + specialty +" الرقم " + num + " " + city + ' Sharing...')
   }
   GotoMap(){
-    this.navCtrl.push(DoctorsmapPage);
+    this.navCtrl.push(DoctorsmapPage,{title:this.name});
   }
 }

@@ -13,8 +13,9 @@ declare let google:any
 export class DoctorsmapPage {
   @ViewChild('map') mapElement:ElementRef
   map:any
-
+  title : string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.title=navParams.get('title');
   }
 
   ionViewDidLoad() {
@@ -26,7 +27,7 @@ loadMap(){
       let LatLng = new google.maps.LatLng(34.6692 , 3.2539  );
       let mapOptions = {
         center:LatLng,
-        zoom: 6,
+        zoom: 13,
         mapTypeId: google.maps.MapTypeId.ROADMAP
      }
      this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
