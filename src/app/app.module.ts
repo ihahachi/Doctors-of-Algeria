@@ -14,7 +14,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ProfilPage } from '../pages/profil/profil';
-//import { SearchPage } from '../pages/search/search';
+import { DoctorsmapPage } from '../pages/doctorsmap/doctorsmap';
 import { SpecialtiesPage } from '../pages/specialties/specialties';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -41,8 +41,8 @@ export const FirbaseConfig = {
     HomePage,
     TabsPage,
     SpecialtiesPage,
-    ProfilPage
-   // SearchPage,
+    ProfilPage,
+    DoctorsmapPage
     
     
   ],
@@ -61,7 +61,7 @@ export const FirbaseConfig = {
     HomePage,
     TabsPage,
     ProfilPage,
-    //SearchPage,
+    DoctorsmapPage,
     SpecialtiesPage
   ],
   providers: [
