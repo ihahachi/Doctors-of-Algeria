@@ -14,8 +14,13 @@ export class DoctorsmapPage {
   @ViewChild('map') mapElement:ElementRef
   map:any
   title : string;
+  longitude: string;
+  latitude:string;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.title=navParams.get('title');
+    this.longitude=navParams.get('longitude');
+    this.latitude=navParams.get('latitude');
   }
 
   ionViewDidLoad() {
@@ -31,5 +36,10 @@ loadMap(){
         mapTypeId: google.maps.MapTypeId.ROADMAP
      }
      this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+     let marker = new google.maps.Marker({
+      map: this.map,
+      animation: google.maps.Animation.DROP,
+      position: new google.maps.LatLng(this.latitude,this.longitude)
+    });
     }
 }
