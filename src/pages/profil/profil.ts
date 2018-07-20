@@ -4,6 +4,8 @@ import { CallNumber } from '@ionic-native/call-number';
 import { SMS } from '@ionic-native/sms';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
+import { DoctorsmapPage } from '../doctorsmap/doctorsmap';
+
 
 @Component({
   selector: 'page-profil',
@@ -71,5 +73,7 @@ export class ProfilPage {
     this.socialSharing.share(msg,name);
     console.log(name + " " + specialty +" الرقم " + num + " " + city + ' Sharing...')
   }
-
+  GotoMap(){
+    this.navCtrl.push(DoctorsmapPage);
+  }
 }

@@ -1,25 +1,34 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ViewChild , ElementRef } from '@angular/core'
 
-/**
- * Generated class for the DoctorsmapPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+declare let google:any
 
-@IonicPage()
+//@IonicPage()
 @Component({
   selector: 'page-doctorsmap',
   templateUrl: 'doctorsmap.html',
 })
+
 export class DoctorsmapPage {
+  @ViewChild('map') mapElement:ElementRef
+  map:any
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DoctorsmapPage');
+     this.loadMap()
   }
 
+
+loadMap(){
+      let LatLng = new google.maps.LatLng(34.6692 , 3.2539  );
+      let mapOptions = {
+        center:LatLng,
+        zoom: 6,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+     }
+     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+    }
 }
