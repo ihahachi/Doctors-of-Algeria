@@ -16,8 +16,8 @@ export class DoctorsmapPage {
   title: string;
   longitude: string;
   latitude: string;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+    constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.title = navParams.get('title');
     this.longitude = navParams.get('longitude');
     this.latitude = navParams.get('latitude');
