@@ -16,10 +16,12 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { ProfilPage } from '../pages/profil/profil';
 import { DoctorsmapPage } from '../pages/doctorsmap/doctorsmap';
 import { SpecialtiesPage } from '../pages/specialties/specialties';
+import { NewDoctorPage } from '../pages/new-doctor/new-doctor';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DoctorServiceProvider } from '../providers/doctor-service/doctor-service';
+
 
 
 
@@ -42,8 +44,8 @@ export const FirbaseConfig = {
     TabsPage,
     SpecialtiesPage,
     ProfilPage,
-    DoctorsmapPage
-    
+    DoctorsmapPage,
+    NewDoctorPage
     
   ],
   imports: [
@@ -62,7 +64,8 @@ export const FirbaseConfig = {
     TabsPage,
     ProfilPage,
     DoctorsmapPage,
-    SpecialtiesPage
+    SpecialtiesPage,
+    NewDoctorPage
   ],
   providers: [
     StatusBar,

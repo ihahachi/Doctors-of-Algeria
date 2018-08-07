@@ -1,0 +1,81 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>إضافة طبيب</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <ion-list>
+    <ion-item>
+      <ion-label floating>الأسم و اللقب</ion-label>
+      <ion-input [(ngModel)]='doctors.name' type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>الأختصاص الأول</ion-label>
+      <ion-input [(ngModel)]='doctors.specialty_01' type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>الأختصاص الثاني</ion-label>
+      <ion-input [(ngModel)]='doctors.specialty_02' type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>مكان العمل</ion-label>
+      <ion-input [(ngModel)]='doctors.wkp_Type' type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>إسم مكان العمل</ion-label>
+      <ion-input [(ngModel)]='doctors.wkp_Usual_Name' type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>العنوان</ion-label>
+      <ion-input [(ngModel)]='doctors.address' type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>الولاية</ion-label>
+      <ion-input [(ngModel)]='doctors.addr_Building' type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>01 رقم الهاتف</ion-label>
+      <ion-input [(ngModel)]='doctors.mobile_Number' type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>رقم الهاتف 02</ion-label>
+        <ion-input [(ngModel)]='doctors.phone_Number' type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label floating>الفاكس</ion-label>
+          <ion-input [(ngModel)]='doctors.fax_Number' type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>البريد الإلكتروني</ion-label>
+            <ion-input [(ngModel)]='doctors.email' type="text"></ion-input>
+          </ion-item>
+
+    <ion-item>
+      <ion-label floating>خطوط الطول</ion-label>
+      <ion-input [(ngModel)]='doctors.latitude' type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>دوائر العرض</ion-label>
+      <ion-input [(ngModel)]='doctors.longitude' type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button block (click)="adddoctors(doctors)">اضافة </button>
+    </ion-item>
+  </ion-list>
+</ion-content>
