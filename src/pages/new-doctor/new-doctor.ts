@@ -2,12 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Doctors } from '../../model/doctors';
 import { DoctorServiceProvider } from '../../providers/doctor-service/doctor-service';
-/**
- * Generated class for the NewDoctorPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+//import { ContactPage } form
+
 
 //@IonicPage()
 @Component({
@@ -55,8 +51,8 @@ export class NewDoctorPage {
   adddoctors(doctors){
     this.doctorServiceProvider.addDoctors(doctors).then(ref => {
       this.MessageBox()
+      this.navCtrl.pop();  
     })
   }
-
   
 }

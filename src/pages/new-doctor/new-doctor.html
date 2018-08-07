@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>إضافة طبيب</ion-title>
   </ion-navbar>
 
@@ -8,21 +8,71 @@
 
 
 <ion-content >
-  <ion-list>
+  <ion-list >
     <ion-item>
       <ion-label floating>الأسم و اللقب</ion-label>
       <ion-input [(ngModel)]='doctors.name' type="text"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label floating>الأختصاص الأول</ion-label>
-      <ion-input [(ngModel)]='doctors.specialty_01' type="text"></ion-input>
-    </ion-item>
+    <ion-item >
+        <ion-label>الأختصاص الأول</ion-label>
+        <ion-select  okText="موافق" cancelText="إلغاء"  [(ngModel)]="doctors.specialty_01">         
+          <ion-option value="طب عام">طب عام</ion-option>
+          <ion-option value="طب الأطفال">طب الأطفال</ion-option>
+          <ion-option value="طب النساء">طب النساء</ion-option>
+          <ion-option value="امراض القلب">امراض القلب</ion-option>
+          <ion-option value="داء السكري">داء السكري</ion-option>
+          <ion-option value="جراحة العظام">جراحة العظام</ion-option>
+          <ion-option value="الروماتيزم">الروماتيزم</ion-option>
+          <ion-option value="امراض الجلد">امراض الجلد</ion-option>
+          <ion-option value="امراض الداخلية">امراض الداخلية</ion-option>
+          <ion-option value="أمراض الرئة">أمراض الرئة</ion-option>
+          <ion-option value="ألانف الحنجره">ألانف الحنجره</ion-option>
+          <ion-option value="الغدد">الغدد</ion-option>
+          <ion-option value="طب النفس">طب النفس</ion-option>
+          <ion-option value="الأعصاب">الأعصاب</ion-option>
+          <ion-option value="امراض الكلى">امراض الكلى</ion-option>
+          <ion-option value="المسالك البولية">المسالك البولية</ion-option>
+          <ion-option value="التخدير">التخدير</ion-option>
+          <ion-option value="جراحة عامة">جراحة عامة</ion-option>
+          <ion-option value="طب الأورام">طب الأورام</ion-option>
+          <ion-option value="صيدلية">صيدلية</ion-option>
+          <ion-option value="التصوير بالأشعة">التصوير بالأشعة</ion-option>
+          <ion-option value="تأهيل الحركي">تأهيل الحركي</ion-option>
+          <ion-option value="مخبر التحاليل">مخبر التحاليل</ion-option>
+          <ion-option value="عيادة">عيادة</ion-option>       
+        </ion-select>
+      </ion-item>
 
-    <ion-item>
-      <ion-label floating>الأختصاص الثاني</ion-label>
-      <ion-input [(ngModel)]='doctors.specialty_02' type="text"></ion-input>
-    </ion-item>
+      <ion-item >
+          <ion-label>الأختصاص الثاني</ion-label>
+          <ion-select  okText="موافق" cancelText="إلغاء"  [(ngModel)]="doctors.specialty_02">         
+            <ion-option value="طب عام">طب عام</ion-option>
+            <ion-option value="طب الأطفال">طب الأطفال</ion-option>
+            <ion-option value="طب النساء">طب النساء</ion-option>
+            <ion-option value="امراض القلب">امراض القلب</ion-option>
+            <ion-option value="داء السكري">داء السكري</ion-option>
+            <ion-option value="جراحة العظام">جراحة العظام</ion-option>
+            <ion-option value="الروماتيزم">الروماتيزم</ion-option>
+            <ion-option value="امراض الجلد">امراض الجلد</ion-option>
+            <ion-option value="امراض الداخلية">امراض الداخلية</ion-option>
+            <ion-option value="أمراض الرئة">أمراض الرئة</ion-option>
+            <ion-option value="ألانف الحنجره">ألانف الحنجره</ion-option>
+            <ion-option value="الغدد">الغدد</ion-option>
+            <ion-option value="طب النفس">طب النفس</ion-option>
+            <ion-option value="الأعصاب">الأعصاب</ion-option>
+            <ion-option value="امراض الكلى">امراض الكلى</ion-option>
+            <ion-option value="المسالك البولية">المسالك البولية</ion-option>
+            <ion-option value="التخدير">التخدير</ion-option>
+            <ion-option value="جراحة عامة">جراحة عامة</ion-option>
+            <ion-option value="طب الأورام">طب الأورام</ion-option>
+            <ion-option value="صيدلية">صيدلية</ion-option>
+            <ion-option value="التصوير بالأشعة">التصوير بالأشعة</ion-option>
+            <ion-option value="تأهيل الحركي">تأهيل الحركي</ion-option>
+            <ion-option value="مخبر التحاليل">مخبر التحاليل</ion-option>
+            <ion-option value="عيادة">عيادة</ion-option>       
+          </ion-select>
+        </ion-item>
 
     <ion-item>
       <ion-label floating>مكان العمل</ion-label>
@@ -75,7 +125,8 @@
     </ion-item>
 
     <ion-item>
-      <button ion-button block (click)="adddoctors(doctors)">اضافة </button>
+      <button class="btn" ion-button icon-start ion-button  large block (click)="adddoctors(doctors)">
+          <ion-icon name="md-add"></ion-icon>اضافة </button>
     </ion-item>
   </ion-list>
 </ion-content>
