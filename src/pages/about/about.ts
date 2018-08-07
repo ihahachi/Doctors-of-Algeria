@@ -66,7 +66,6 @@ export class AboutPage {
   FillData() {
     this.items = this.db.list('doctorsmap',
     ref => ref.orderByChild('specialty_01').equalTo(this.title)).valueChanges();
-   
   }
 
 
@@ -126,4 +125,22 @@ export class AboutPage {
                                              });
     console.log(info);
   }
+
+/*   getItems(ev) {
+    // Reset items back to all of the items
+    //this.initializeItems();
+    //this.FillData();
+    // set val to the value of the ev target
+    var val = ev.target.value;
+
+    // if the value is an empty string don't filter the items
+    if (val && val.trim() != '') {
+      c = this.db.collection('doctorsmap');
+      var query =this.items.where("capital", "==", true);
+      /* .equalTo(this.title)
+      .orderBy('name')
+      .equalTo(val)).valueChanges();
+    }
+} */
+
 }
