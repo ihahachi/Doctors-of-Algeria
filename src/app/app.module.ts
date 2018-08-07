@@ -8,6 +8,7 @@ import { Network } from '@ionic-native/network';
 import { CallNumber } from '@ionic-native/call-number';
 import { SMS } from '@ionic-native/sms';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -75,7 +76,8 @@ export const FirbaseConfig = {
     CallNumber,
     SMS,
     SocialSharing,
-    Network
+    Network,
+    InAppBrowser
   ]
 })
 export class AppModule {}

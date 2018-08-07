@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SpecialtiesPage } from '../specialties/specialties';
 import { NewDoctorPage } from '../new-doctor/new-doctor';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { NewDoctorPage } from '../new-doctor/new-doctor';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,private iab: InAppBrowser) {
 
   }
 
