@@ -24,6 +24,7 @@
     "@firebase/database": "^0.2.1",
     "@ionic-native/call-number": "^4.9.2",
     "@ionic-native/core": "4.7.0",
+    "@ionic-native/in-app-browser": "^4.11.0",
     "@ionic-native/network": "^4.9.1",
     "@ionic-native/sms": "^4.9.2",
     "@ionic-native/social-sharing": "^4.9.2",
