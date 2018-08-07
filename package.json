@@ -35,6 +35,7 @@
     "cordova-android": "7.0.0",
     "cordova-browser": "5.0.3",
     "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-inappbrowser": "^3.0.0",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.1.19",
     "cordova-plugin-network-information": "^2.0.1",
@@ -66,7 +67,8 @@
       "mx.ferreyra.callnumber": {},
       "cordova-sms-plugin": {},
       "cordova-plugin-x-socialsharing": {},
-      "call-number": {}
+      "call-number": {},
+      "cordova-plugin-inappbrowser": {}
     },
     "platforms": [
       "browser",
