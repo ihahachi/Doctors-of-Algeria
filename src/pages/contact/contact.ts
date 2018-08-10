@@ -21,7 +21,7 @@ export class ContactPage {
   }
 
   OpenPageFacebook(){
-    const browser = this.iab.create('https://ionicframework.com/');
+    const browser = this.iab.create('https://www.facebook.com/AppsMedicinDz/');
   }
 
 }
